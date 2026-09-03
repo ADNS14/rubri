@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeporTienda - Artículos Deportivos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <h1 class="logo">🏆 DeporTienda</h1>
+      <button id="cart-btn" class="cart-btn">
+        🛒 Carrito <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Los mejores artículos deportivos</h2>
+      <p>Equípate para dar lo mejor de ti</p>
+    </section>
+
+    <section class="filters">
+      <button class="filter-btn active" data-category="todos">Todos</button>
+      <button class="filter-btn" data-category="futbol">Fútbol</button>
+      <button class="filter-btn" data-category="running">Running</button>
+      <button class="filter-btn" data-category="gym">Gimnasio</button>
+      <button class="filter-btn" data-category="natacion">Natación</button>
+    </section>
+
+    <section id="products" class="products-grid">
+      <!-- Los productos se generan dinámicamente con JS -->
+    </section>
+  </main>
+
+  <!-- Modal del carrito -->
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-modal-content">
+      <div class="cart-header">
+        <h3>Tu Carrito</h3>
+        <button id="close-cart" class="close-btn">✕</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          Total: <span id="cart-total">$0</span>
+        </div>
+        <button id="clear-cart" class="clear-btn">Vaciar carrito</button>
+      </div>
+    </div>
